@@ -129,7 +129,8 @@ class Game:
                         self.save_current_score()
                     if self.clear_score_history_button.collidepoint(pygame.mouse.get_pos()):
                         self.clear_score_history()
-                        self.pause = False
+                        self.leaderboard_loaded = False
+                        self.leaderboard_scores_array.clear()
 
             # left button up
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
